@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DahAutobiography</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <h1>Me puso 5 la de lectura</h1>
+    <div class="container">
+        <aside class="sidebar">
+            <button class="close-button" onclick="sidebarCloseButtonOnClick()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <div class="sidebar-div sidebar-image-and-my-name">
+                <p class="my-name">Luis Alonso Andrade López</p>
+                <img src="/resources/profileimage.png" alt="Sidebar Image" class="profile-img">
+            </div>
+            <div class="sidebar-div sidebar-content">
+                <button class="sidebar-button" onclick="whoAmIButtonOnClick()">¿Quién se supone que soy yo?</button>
+                <button class="sidebar-button" onclick="habilitiesButtonOnClick()">Habilidades</button>
+                <button class="sidebar-button" onclick="profilesButtonOnClick()">Perfiles</button>
+            </div>
+        </aside>
+
+        <section class="who-am-i-content">
+            <header>
+                <button class="show-sidebar-button" onclick="showSidebarButtonOnClick()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>¿Eh? ¿Quién se supone que soy yo?</h1>
+                <img src="your-image-url-here" alt="Sidebar Image" class="profile-img">
+            </header>
+
+            <div class="blog-promo">
+                <p>Because your work matters.</p>
+                <button>Subscribe to my blog</button>
+            </div>
+
+            <div class="read-watch-learn">
+                <h2>Read, Watch, Learn...</h2>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

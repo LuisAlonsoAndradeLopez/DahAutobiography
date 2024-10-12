@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+body .container {
+  display: flex;
+  min-height: 100vh;
+}
+body .container .sidebar {
+  animation: sidebarColorChange 3s infinite alternate;
+  width: 20%;
+  padding: 20px;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+@keyframes sidebarColorChange {
+  0% {
+    background-color: #222222;
+  }
+  100% {
+    background-color: rgba(34, 34, 34, 0);
+  }
+}
+@keyframes moveSidebarRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+@keyframes moveSidebarLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+body .container .sidebar .move-sidebar-right {
+  animation: moveSidebarRight 1s ease forwards, fadeIn 2s ease-in forwards;
+}
+body .container .sidebar .move-sidebar-left {
+  animation: moveSidebarLeft 1s ease forwards, fadeIn 2s ease-in forwards;
+}
+body .container .sidebar .close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 10px;
+  color: #222222;
+  transition: color 0.3s ease;
+}
+body .container .sidebar .close-button svg {
+  width: 40px;
+  height: 40px;
+}
+body .container .sidebar .close-button:hover {
+  color: #ff3f49;
+}
+body .container .sidebar .sidebar-div {
+  animation: sidebarDivColorChange 3s infinite alternate;
+  margin: 10px;
+  border-radius: 20px;
+}
+@keyframes sidebarDivColorChange {
+  0% {
+    background-color: #111111;
+  }
+  100% {
+    background-color: #222222;
+  }
+}
+body .container .sidebar .sidebar-image-and-my-name .my-name {
+  font-size: 30px;
+}
+body .container .sidebar .sidebar-image-and-my-name .profile-img {
+  border-radius: 20%;
+  width: 160px;
+  margin-bottom: 20px;
+}
+body .container .sidebar .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .sidebar .sidebar-content .sidebar-button {
+  background-color: #ff3f49;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+body .container .sidebar .sidebar-content .sidebar-button:hover {
+  background-color: #91272c;
+}
+body .container .sidebar .sidebar-content .sidebar-button:active {
+  background-color: #461215;
+}
+body .container .main-content {
+  width: 80%;
+  background-color: #111111;
+  padding: 40px;
+}
+body .container .main-content header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+body .container .main-content header .show-sidebar-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+body .container .main-content header .show-sidebar-button i {
+  margin: 0;
+}
+body .container .main-content header .show-sidebar-button:hover {
+  background-color: #e67300;
+}
+body .container .main-content header .show-sidebar-button:focus {
+  outline: none;
+}
+body .container .main-content header h1 {
+  color: #222222;
+}
+body .container .main-content header button {
+  background-color: #ff3f49;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+body .container .main-content .blog-promo {
+  text-align: center;
+  background-color: #ff3f49;
+  padding: 20px;
+  color: #ffffff;
+}
+body .container .main-content .blog-promo button {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+body .container .main-content .read-watch-learn {
+  text-align: center;
+}
+body .container .main-content .read-watch-learn h2 {
+  color: #222222;
+}
+
+/*# sourceMappingURL=styles.css.map */
