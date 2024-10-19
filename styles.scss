@@ -12,19 +12,22 @@ $transparent-dark-gray: rgba(34, 34, 34, 0);
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: $black;
+    color: $white;
 
     .container {
         display: flex;
         min-height: 100vh;
 
         .sidebar {
-            animation: sidebarColorChange 3s infinite alternate;
             width: 20%;
             padding: 20px;
             color: $white;
             position: relative;
             text-align: center;
             display: block;
+            left: 0px;
+            animation: sidebarColorChange 3s infinite alternate;
 
             @keyframes sidebarColorChange {
                 0% {
@@ -36,34 +39,6 @@ body {
                 }
             }
 
-            @keyframes moveSidebarRight {
-                from {
-                    transform: translateX(0);
-                }
-
-                to {
-                    transform: translateX(100px);
-                }
-            }
-
-            @keyframes moveSidebarLeft {
-                from {
-                    transform: translateX(0);
-                }
-
-                to {
-                    transform: translateX(-100px);
-                }
-            }
-
-            .move-sidebar-right {
-                animation: moveSidebarRight 1s ease forwards, fadeIn 2s ease-in forwards;
-            }
-
-            .move-sidebar-left {
-                animation: moveSidebarLeft 1s ease forwards, fadeIn 2s ease-in forwards;
-            }
-
             .close-button {
                 background-color: transparent;
                 border: none;
@@ -73,8 +48,8 @@ body {
                 top: -10px;
                 right: -10px;
                 font-size: 10px;
-                color: $dark-gray;
-                transition: color 0.3s ease;
+                color: $white;
+                //transition: color 0.3s ease;
 
                 svg {
                     width: 40px;
@@ -84,12 +59,16 @@ body {
                 &:hover {
                     color: $red;
                 }
+
+                &:active {
+                    color: $very-dark-red;
+                }
             }
 
             .sidebar-div {
-                animation: sidebarDivColorChange 3s infinite alternate;
                 margin: 10px;
                 border-radius: 20px;
+                animation: sidebarDivColorChange 3s infinite alternate;
 
                 @keyframes sidebarDivColorChange {
                     0% {
@@ -103,8 +82,14 @@ body {
             }
 
             .sidebar-image-and-my-name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+
                 .my-name {
                     font-size: 30px;
+                    margin-top: 20px;
                 }
 
                 .profile-img {

@@ -1,11 +1,12 @@
 var sidebar = document.getElementsByClassName('sidebar')[0];
 
-function showSidebarButtonOnClick() {
-    sidebar.classList.add('move-sidebar-right');
+function sidebarCloseButtonOnClick() {
+    sidebar.style.backgroundColor = "lightblue";
+    sidebar.style.display = "none";
 }
 
-function sidebarCloseButtonOnClick() {
-    sidebar.classList.add('move-sidebar-left');
+function showSidebarButtonOnClick() {
+    sidebar.style.display = "block";
 }
 
 function whoAmIButtonOnClick() {
