@@ -95,7 +95,7 @@ body {
 
                 .profile-img {
                     border-radius: 20%;
-                    width: 160px;
+                    width: 80%;
                     margin-bottom: 20px;
                 }
             }
@@ -110,6 +110,7 @@ body {
                     color: $white;
                     font-size: 20px;
                     margin: 10px;
+                    width: 90%;
                     padding: 10px 20px;
                     border: none;
                     border-radius: 20px;
@@ -150,13 +151,40 @@ body {
                 }
             }
 
+            .general-content-div {
+                animation: generalContentDivColorChange 3s infinite alternate;
+
+                @keyframes generalContentDivColorChange {
+                    0% {
+                        background-color: $dark-gray;
+                    }
+
+                    100% {
+                        background-color: $black;
+                    }
+                }
+            }
+
+            .general-content-subcontent-div {
+                animation: generalContentSubcontentDivColorChange 3s infinite alternate;
+
+                @keyframes generalContentSubcontentDivColorChange {
+                    0% {
+                        background-color: $black;
+                    }
+
+                    100% {
+                        background-color: $dark-gray;
+                    }
+                }
+            }
+
             .who-am-i-content {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 align-items: center;
                 border-radius: 20px;
                 margin: 0px 20px 20px 20px;
-                background-color: $dark-gray;
 
                 .who-am-i-text-div {
                     display: flex;
@@ -164,7 +192,6 @@ body {
                     align-items: center;
                     border-radius: 20px;
                     margin: 20px;
-                    background-color: $black;
 
                     h1 {
                         margin: 20px;
@@ -179,7 +206,6 @@ body {
                     align-items: center;
                     border-radius: 20px 20px 0px 0px;
                     margin: 20px 20px 0px 20px;
-                    background-color: $black;
 
                     h1 {
                         margin: 20px;
@@ -194,7 +220,6 @@ body {
                     align-items: center;
                     border-radius: 20px;
                     margin: 0px 50px 20px 50px;
-                    background-color: $black;
 
                     p {
                         margin: 10px;
@@ -209,7 +234,86 @@ body {
             }
 
             .profiles-content {
-                display: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 20px;
+                width: 123%;
+                margin: 0px 20px 20px 20px;
+
+                .my-profiles-text-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 20px;
+                    width: 97%;
+                    margin: 20px;
+
+                    h1 {
+                        margin: 20px;
+                        text-align: center;
+                        font-size: 36px;
+                    }
+                }
+
+                .all-profiles-content-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 20px;
+                    width: 97%;
+                    margin: 0px 20px 20px 20px;
+
+                    .horizontally-ordered-profiles-content-div {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        border-radius: 20px;
+                        width: 97%;
+                        margin: 20px;
+
+                        .profile-div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 90%;
+                            border-radius: 20px;
+                            margin: 20px;
+
+                            .profile-text {
+                                font-size: 30px;
+                                margin: 20px 20px 0px 20px;
+                            }
+
+                            .profile-image {
+                                border-radius: 20%;
+                                height: 73%;
+                                width: 73%;
+                                margin: 6% 100% 0% 100%;
+                            }
+
+                            .visit-profile-button {
+                                background-color: $red;
+                                color: $white;
+                                font-size: 22px;
+                                margin: 20px;
+                                width: 50%;
+                                padding: 10px;
+                                border: none;
+                                border-radius: 20px;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $dark-red;
+                                }
+
+                                &:active {
+                                    background-color: $very-dark-red;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
