@@ -7,6 +7,7 @@ body {
 body .container {
   display: flex;
   min-height: 100vh;
+  background-color: #111111;
 }
 body .container .sidebar {
   width: 20%;
@@ -14,7 +15,7 @@ body .container .sidebar {
   color: #ffffff;
   position: relative;
   text-align: center;
-  display: block;
+  display: none;
   left: 0px;
   animation: sidebarColorChange 3s infinite alternate;
 }
@@ -67,7 +68,7 @@ body .container .sidebar .sidebar-image-and-my-name {
   margin-top: 20px;
 }
 body .container .sidebar .sidebar-image-and-my-name .my-name {
-  font-size: 30px;
+  font-size: 24px;
   margin-top: 20px;
 }
 body .container .sidebar .sidebar-image-and-my-name .profile-img {
@@ -96,18 +97,9 @@ body .container .sidebar .sidebar-content .sidebar-button:hover {
 body .container .sidebar .sidebar-content .sidebar-button:active {
   background-color: #461215;
 }
-body .container .main-content {
-  width: 80%;
-  background-color: #111111;
-  padding: 40px;
-}
-body .container .main-content header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-body .container .main-content header .show-sidebar-button {
+body .container .general-content .show-sidebar-button {
   background-color: transparent;
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 10px 15px;
   font-size: 20px;
@@ -115,43 +107,67 @@ body .container .main-content header .show-sidebar-button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-body .container .main-content header .show-sidebar-button i {
+body .container .general-content .show-sidebar-button i {
   margin: 0;
 }
-body .container .main-content header .show-sidebar-button:hover {
-  background-color: #e67300;
+body .container .general-content .show-sidebar-button:hover {
+  color: #ff3f49;
 }
-body .container .main-content header .show-sidebar-button:focus {
-  outline: none;
+body .container .general-content .show-sidebar-button:active {
+  color: #461215;
 }
-body .container .main-content header h1 {
-  color: #222222;
-}
-body .container .main-content header button {
-  background-color: #ff3f49;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-body .container .main-content .blog-promo {
-  text-align: center;
-  background-color: #ff3f49;
-  padding: 20px;
-  color: #ffffff;
-}
-body .container .main-content .blog-promo button {
+body .container .general-content .who-am-i-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0px 20px 20px 20px;
   background-color: #222222;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
 }
-body .container .main-content .read-watch-learn {
+body .container .general-content .who-am-i-content .who-am-i-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: #111111;
+}
+body .container .general-content .who-am-i-content .who-am-i-text-div h1 {
+  margin: 20px;
   text-align: center;
+  font-size: 70.9px;
 }
-body .container .main-content .read-watch-learn h2 {
-  color: #222222;
+body .container .general-content .who-am-i-content .my-name-is-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 20px 0px 0px;
+  margin: 20px 20px 0px 20px;
+  background-color: #111111;
+}
+body .container .general-content .who-am-i-content .my-name-is-text-div h1 {
+  margin: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+body .container .general-content .who-am-i-content .mini-autobiography-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0px 50px 20px 50px;
+  background-color: #111111;
+}
+body .container .general-content .who-am-i-content .mini-autobiography-text-div p {
+  margin: 10px;
+  text-align: center;
+  font-size: 70px;
+}
+body .container .general-content .projects-content {
+  display: none;
+}
+body .container .general-content .profiles-content {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
