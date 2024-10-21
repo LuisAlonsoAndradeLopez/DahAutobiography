@@ -9,6 +9,25 @@ $white: #ffffff;
 $transparent-black: rgba(17, 17, 17, 0);
 $transparent-dark-gray: rgba(34, 34, 34, 0);
 
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: $dark-red;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $very-dark-red;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -94,8 +113,8 @@ body {
                 }
 
                 .profile-img {
-                    border-radius: 20%;
-                    width: 80%;
+                    border-radius: 15%;
+                    width: 70%;
                     margin-bottom: 20px;
                 }
             }
@@ -180,25 +199,11 @@ body {
             }
 
             .who-am-i-content {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 align-items: center;
                 border-radius: 20px;
                 margin: 0px 20px 20px 20px;
-
-                .who-am-i-text-div {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    border-radius: 20px;
-                    margin: 20px;
-
-                    h1 {
-                        margin: 20px;
-                        text-align: center;
-                        font-size: 70.9px;
-                    }
-                }
 
                 .my-name-is-text-div {
                     display: flex;
@@ -206,9 +211,10 @@ body {
                     align-items: center;
                     border-radius: 20px 20px 0px 0px;
                     margin: 20px 20px 0px 20px;
+                    width: 97%;
 
                     h1 {
-                        margin: 20px;
+                        margin: 20px 20px 5px 20px;
                         text-align: center;
                         font-size: 40px;
                     }
@@ -218,19 +224,77 @@ body {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    border-radius: 20px;
+                    border-radius: 0px 0px 20px 20px;
                     margin: 0px 50px 20px 50px;
+                    width: 97%;
 
                     p {
-                        margin: 10px;
+                        margin: 5px 20px 20px 20px;
                         text-align: center;
-                        font-size: 70px;
+                        font-size: 24px;
+                        text-align: justify;
+                    }
+                }
+
+                .all-technologies-content-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 20px;
+                    height: 70%;
+                    width: 97%;
+                    margin: 0px 20px 20px 20px;
+
+                    .learned-technologies-text-div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border-radius: 20px;
+                        margin: 20px;
+
+                        h1 {
+                            margin: 20px;
+                            text-align: center;
+                            font-size: 30px;
+                        }
+                    }
+
+                    .horizontally-ordered-technologies-content-div {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        border-radius: 20px;
+                        width: 1240px;
+                        margin: 0px 20px 20px 20px;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+
+                        .technology-div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            border-radius: 20px;
+                            margin: 20px;
+
+                            .technology-title {
+                                font-size: 30px;
+                                text-align: center;
+                                margin: 20px 20px 5px 20px;
+                            }
+
+                            .technology-image {
+                                border-radius: 20%;
+                                height: 50px;
+                                width: 50px;
+                                margin: 5px 20px 20px 20px;
+                            }
+                        }
                     }
                 }
             }
 
             .projects-content {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 align-items: center;
                 border-radius: 20px;
