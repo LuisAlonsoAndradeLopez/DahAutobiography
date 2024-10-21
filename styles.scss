@@ -230,11 +230,115 @@ body {
             }
 
             .projects-content {
-                display: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 20px;
+                width: 97%;
+                margin: 0px 20px 20px 20px;
+
+                .my-projects-text-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 20px;
+                    width: 97%;
+                    margin: 20px;
+
+                    h1 {
+                        margin: 20px;
+                        text-align: center;
+                        font-size: 36px;
+                    }
+                }
+
+                .all-projects-content-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 20px;
+                    height: 70%;
+                    width: 97%;
+                    margin: 0px 20px 20px 20px;
+
+                    .vertically-ordered-projects-content-div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border-radius: 20px;
+                        height: 394px;
+                        width: 97%;
+                        margin: 20px;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+
+                        .project-div {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            width: 97%;
+                            border-radius: 20px;
+                            margin: 20px 10px 20px 10px;
+
+                            .project-title-and-release-date-div {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 30%;
+                                margin: 20px;
+
+                                .project-title {
+                                    font-size: 30px;
+                                    text-align: center;
+                                    margin: 20px 20px 0px 20px;
+                                }
+
+                                .project-release-date {
+                                    font-size: 30px;
+                                    margin: 0px 20px 20px 20px;
+                                }
+                            }
+
+                            .project-image {
+                                border-radius: 20%;
+                                height: 60%;
+                                width: 20%;
+                                margin: 20px;
+                            }
+
+                            .project-description {
+                                font-size: 20px;
+                                text-align: justify;
+                                width: 70%;
+                                margin: 20px;
+                            }
+
+                            .visit-project-button {
+                                background-color: $red;
+                                color: $white;
+                                font-size: 26px;
+                                margin: 20px;
+                                width: 30%;
+                                padding: 20px;
+                                border: none;
+                                border-radius: 20px;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $dark-red;
+                                }
+
+                                &:active {
+                                    background-color: $very-dark-red;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .profiles-content {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 align-items: center;
                 border-radius: 20px;

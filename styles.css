@@ -183,10 +183,101 @@ body .container .general-content .who-am-i-content .mini-autobiography-text-div 
   font-size: 70px;
 }
 body .container .general-content .projects-content {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  width: 97%;
+  margin: 0px 20px 20px 20px;
+}
+body .container .general-content .projects-content .my-projects-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  width: 97%;
+  margin: 20px;
+}
+body .container .general-content .projects-content .my-projects-text-div h1 {
+  margin: 20px;
+  text-align: center;
+  font-size: 36px;
+}
+body .container .general-content .projects-content .all-projects-content-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  height: 70%;
+  width: 97%;
+  margin: 0px 20px 20px 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  height: 394px;
+  width: 97%;
+  margin: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 97%;
+  border-radius: 20px;
+  margin: 20px 10px 20px 10px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-title-and-release-date-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  margin: 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-title-and-release-date-div .project-title {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 20px 0px 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-title-and-release-date-div .project-release-date {
+  font-size: 30px;
+  margin: 0px 20px 20px 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-image {
+  border-radius: 20%;
+  height: 60%;
+  width: 20%;
+  margin: 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-description {
+  font-size: 20px;
+  text-align: justify;
+  width: 70%;
+  margin: 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .visit-project-button {
+  background-color: #ff3f49;
+  color: #ffffff;
+  font-size: 26px;
+  margin: 20px;
+  width: 30%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .visit-project-button:hover {
+  background-color: #91272c;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .visit-project-button:active {
+  background-color: #461215;
 }
 body .container .general-content .profiles-content {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
