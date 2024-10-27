@@ -1,5 +1,5 @@
 $black: #111111;
-$dark-red: #91272c;
+$dark-red: #7e2428;
 $dark-gray: #222222;
 $gray: #777777;
 $red: #ff3f49;
@@ -9,9 +9,41 @@ $white: #ffffff;
 $transparent-black: rgba(17, 17, 17, 0);
 $transparent-dark-gray: rgba(34, 34, 34, 0);
 
+@mixin color-bg-transition($color1, $color2, $animation-name: colorChange) {
+    animation: #{$animation-name} 3s infinite alternate;
+
+    @keyframes #{$animation-name} {
+        0% {
+            background-color: $color1;
+        }
+
+        100% {
+            background-color: $color2;
+        }
+    }
+}
+
+@mixin general-button-content() {
+    background-color: $red;
+    border: none;
+    border-radius: 20px;
+    color: $white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: $dark-red;
+    }
+
+    &:active {
+        background-color: $very-dark-red;
+    }
+}
+
 ::-webkit-scrollbar {
-    width: 20px;
     height: 20px;
+    width: 20px;
 }
 
 ::-webkit-scrollbar-track {
@@ -29,35 +61,25 @@ $transparent-dark-gray: rgba(34, 34, 34, 0);
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     background-color: $black;
     color: $white;
+    font-family: Arial, sans-serif;
+    margin: 0;
 
     .container {
+        background-color: $black;
         display: flex;
         min-height: 100vh;
-        background-color: $black;
 
         .sidebar {
-            width: 20%;
-            padding: 20px;
             color: $white;
-            position: relative;
-            text-align: center;
             display: none;
             left: 0px;
-            animation: sidebarColorChange 3s infinite alternate;
-
-            @keyframes sidebarColorChange {
-                0% {
-                    background-color: $dark-gray;
-                }
-
-                100% {
-                    background-color: $transparent-dark-gray;
-                }
-            }
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            width: 20%;
+            @include color-bg-transition($dark-gray, $transparent-dark-gray, sidebarColorChange);
 
             .close-button {
                 background-color: transparent;
@@ -86,62 +108,39 @@ body {
             }
 
             .sidebar-div {
-                margin: 10px;
                 border-radius: 20px;
-                animation: sidebarDivColorChange 3s infinite alternate;
-
-                @keyframes sidebarDivColorChange {
-                    0% {
-                        background-color: $black;
-                    }
-
-                    100% {
-                        background-color: $dark-gray;
-                    }
-                }
+                margin: 10px;
+                @include color-bg-transition($black, $dark-gray, sidebarDivColorChange);
             }
 
             .sidebar-image-and-my-name {
+                align-items: center;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 margin-top: 20px;
 
                 .my-name {
-                    font-size: 24px;
+                    font-size: 140%;
                     margin-top: 20px;
                 }
 
                 .profile-img {
                     border-radius: 15%;
-                    width: 70%;
                     margin-bottom: 20px;
+                    width: 70%;
                 }
             }
 
             .sidebar-content {
-                display: flex;
-                flex-direction: column;
                 align-items: center;
+                flex-direction: column;
+                display: flex;
 
                 .sidebar-button {
-                    background-color: $red;
-                    color: $white;
-                    font-size: 20px;
-                    margin: 10px;
+                    font-size: 120%;
                     width: 90%;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 20px;
-                    cursor: pointer;
 
-                    &:hover {
-                        background-color: $dark-red;
-                    }
-
-                    &:active {
-                        background-color: $very-dark-red;
-                    }
+                    @include general-button-content();
                 }
             }
         }
@@ -171,31 +170,11 @@ body {
             }
 
             .general-content-div {
-                animation: generalContentDivColorChange 3s infinite alternate;
-
-                @keyframes generalContentDivColorChange {
-                    0% {
-                        background-color: $dark-gray;
-                    }
-
-                    100% {
-                        background-color: $black;
-                    }
-                }
+                @include color-bg-transition($dark-gray, $black, generalContentDivColorChange);
             }
 
             .general-content-subcontent-div {
-                animation: generalContentSubcontentDivColorChange 3s infinite alternate;
-
-                @keyframes generalContentSubcontentDivColorChange {
-                    0% {
-                        background-color: $black;
-                    }
-
-                    100% {
-                        background-color: $dark-gray;
-                    }
-                }
+                @include color-bg-transition($black, $dark-gray, generalContentSubcontentDivColorChange);
             }
 
             .who-am-i-content {
@@ -378,23 +357,9 @@ body {
                             }
 
                             .visit-project-button {
-                                background-color: $red;
-                                color: $white;
-                                font-size: 26px;
-                                margin: 20px;
-                                width: 30%;
-                                padding: 20px;
-                                border: none;
-                                border-radius: 20px;
-                                cursor: pointer;
+                                font-size: 120%;
 
-                                &:hover {
-                                    background-color: $dark-red;
-                                }
-
-                                &:active {
-                                    background-color: $very-dark-red;
-                                }
+                                @include general-button-content();
                             }
                         }
                     }
@@ -405,8 +370,8 @@ body {
                 display: none;
                 flex-direction: column;
                 align-items: center;
-                border-radius: 20px;
                 width: 123%;
+                border-radius: 20px;
                 margin: 0px 20px 20px 20px;
 
                 .my-profiles-text-div {
@@ -461,28 +426,38 @@ body {
                             }
 
                             .visit-profile-button {
-                                background-color: $red;
-                                color: $white;
-                                font-size: 22px;
-                                margin: 20px;
-                                width: 50%;
-                                padding: 10px;
-                                border: none;
-                                border-radius: 20px;
-                                cursor: pointer;
+                                font-size: 120%;
+                                width: 60%;
 
-                                &:hover {
-                                    background-color: $dark-red;
-                                }
-
-                                &:active {
-                                    background-color: $very-dark-red;
-                                }
+                                @include general-button-content();
                             }
                         }
                     }
                 }
             }
         }
+    }
+}
+
+//@media only screen and (max-width: 900px) {
+//    #footer .grid {
+//        grid-template-columns: repeat(2, 1fr);
+//    }
+//
+//    #footer .col-2 {
+//        grid-column: span 1;
+//    }
+//}
+//
+//@media only screen and (max-width: 600px) {
+//    #footer .grid {
+//        grid-template-columns: 100%;
+//    }
+//}
+
+@media only screen and (max-width: 400px) {
+    .sidebar-button, .visit-profile-button, .visit-project-button {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
     }
 }
