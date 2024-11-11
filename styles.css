@@ -35,7 +35,7 @@ body .container .sidebar {
   padding: 20px;
   position: relative;
   text-align: center;
-  width: 20%;
+  width: 25%;
   animation: sidebarColorChange 3s infinite alternate;
 }
 @keyframes sidebarColorChange {
@@ -171,25 +171,25 @@ body .container .general-content .who-am-i-content .my-name-is-text-div {
   align-items: center;
   border-radius: 20px 20px 0px 0px;
   margin: 20px 20px 0px 20px;
-  width: 97%;
 }
 body .container .general-content .who-am-i-content .my-name-is-text-div h1 {
-  margin: 20px 20px 5px 20px;
+  margin: 20px 80px 5px 80px;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 body .container .general-content .who-am-i-content .mini-autobiography-text-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 0px 0px 20px 20px;
-  margin: 0px 50px 20px 50px;
+  border-radius: 20px;
+  margin: 0px 80px 20px 80px;
   width: 97%;
+  height: 50%;
 }
 body .container .general-content .who-am-i-content .mini-autobiography-text-div p {
-  margin: 5px 20px 20px 20px;
+  margin: 20px;
   text-align: center;
-  font-size: 24px;
+  font-size: 25px;
   text-align: justify;
 }
 body .container .general-content .who-am-i-content .all-technologies-content-div {
@@ -218,7 +218,6 @@ body .container .general-content .who-am-i-content .all-technologies-content-div
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
-  width: 1240px;
   margin: 0px 20px 20px 20px;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -231,14 +230,14 @@ body .container .general-content .who-am-i-content .all-technologies-content-div
   margin: 20px;
 }
 body .container .general-content .who-am-i-content .all-technologies-content-div .horizontally-ordered-technologies-content-div .technology-div .technology-title {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   margin: 20px 20px 5px 20px;
 }
 body .container .general-content .who-am-i-content .all-technologies-content-div .horizontally-ordered-technologies-content-div .technology-div .technology-image {
   border-radius: 20%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin: 5px 20px 20px 20px;
 }
 body .container .general-content .projects-content {
@@ -246,7 +245,6 @@ body .container .general-content .projects-content {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  width: 97%;
   margin: 0px 20px 20px 20px;
 }
 body .container .general-content .projects-content .my-projects-text-div {
@@ -408,9 +406,41 @@ body .container .general-content .profiles-content .all-profiles-content-div .ho
 }
 
 @media only screen and (max-width: 400px) {
-  .sidebar-button, .visit-profile-button, .visit-project-button {
+  .sidebar-button,
+  .visit-profile-button,
+  .visit-project-button {
     writing-mode: vertical-rl;
     text-orientation: upright;
+  }
+}
+@media (max-width: 575.98px) {
+  .horizontally-ordered-technologies-content-div {
+    width: 300px;
+  }
+}
+@media (min-width: 576px) {
+  .horizontally-ordered-technologies-content-div {
+    width: 376px;
+  }
+}
+@media (min-width: 768px) {
+  .horizontally-ordered-technologies-content-div {
+    width: 568px;
+  }
+}
+@media (min-width: 992px) {
+  .horizontally-ordered-technologies-content-div {
+    width: 792px;
+  }
+}
+@media (min-width: 1200px) {
+  .horizontally-ordered-technologies-content-div {
+    width: 1000px;
+  }
+}
+@media (min-width: 1400px) {
+  .horizontally-ordered-technologies-content-div {
+    width: 1200px;
   }
 }
 
