@@ -159,7 +159,7 @@ body .container .general-content .general-content-subcontent-div {
   }
 }
 body .container .general-content .who-am-i-content {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
@@ -241,7 +241,7 @@ body .container .general-content .who-am-i-content .all-technologies-content-div
   margin: 5px 20px 20px 20px;
 }
 body .container .general-content .projects-content {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
@@ -296,18 +296,18 @@ body .container .general-content .projects-content .all-projects-content-div .ve
   margin: 20px;
 }
 body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-title-and-release-date-div .project-title {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   margin: 20px 20px 0px 20px;
 }
 body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-title-and-release-date-div .project-release-date {
-  font-size: 30px;
+  font-size: 25px;
   margin: 0px 20px 20px 20px;
 }
 body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-image {
   border-radius: 20%;
-  height: 60%;
-  width: 20%;
+  height: 140px;
+  width: 140px;
   margin: 20px;
 }
 body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-description {
@@ -316,7 +316,13 @@ body .container .general-content .projects-content .all-projects-content-div .ve
   width: 70%;
   margin: 20px;
 }
-body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .visit-project-button {
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-buttons .project-button {
   font-size: 120%;
   background-color: #ff3f49;
   border: none;
@@ -326,17 +332,16 @@ body .container .general-content .projects-content .all-projects-content-div .ve
   margin: 10px;
   padding: 10px 20px;
 }
-body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .visit-project-button:hover {
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-buttons .project-button:hover {
   background-color: #7e2428;
 }
-body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .visit-project-button:active {
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-buttons .project-button:active {
   background-color: #461215;
 }
 body .container .general-content .profiles-content {
   display: none;
   flex-direction: column;
   align-items: center;
-  width: 123%;
   border-radius: 20px;
   margin: 0px 20px 20px 20px;
 }
@@ -345,7 +350,6 @@ body .container .general-content .profiles-content .my-profiles-text-div {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  width: 97%;
   margin: 20px;
 }
 body .container .general-content .profiles-content .my-profiles-text-div h1 {
@@ -364,16 +368,16 @@ body .container .general-content .profiles-content .all-profiles-content-div {
 body .container .general-content .profiles-content .all-profiles-content-div .horizontally-ordered-profiles-content-div {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   border-radius: 20px;
-  width: 97%;
   margin: 20px;
 }
 body .container .general-content .profiles-content .all-profiles-content-div .horizontally-ordered-profiles-content-div .profile-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
   border-radius: 20px;
   margin: 20px;
 }
@@ -383,9 +387,9 @@ body .container .general-content .profiles-content .all-profiles-content-div .ho
 }
 body .container .general-content .profiles-content .all-profiles-content-div .horizontally-ordered-profiles-content-div .profile-div .profile-image {
   border-radius: 20%;
-  height: 73%;
-  width: 73%;
-  margin: 6% 100% 0% 100%;
+  height: 216px;
+  width: 216px;
+  margin: 10px 20px;
 }
 body .container .general-content .profiles-content .all-profiles-content-div .horizontally-ordered-profiles-content-div .profile-div .visit-profile-button {
   font-size: 120%;
@@ -421,6 +425,11 @@ body .container .general-content .profiles-content .all-profiles-content-div .ho
 @media (min-width: 576px) {
   .horizontally-ordered-technologies-content-div {
     width: 376px;
+  }
+  .project-div {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 768px) {
