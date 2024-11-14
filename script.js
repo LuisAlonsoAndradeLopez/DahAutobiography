@@ -1,3 +1,4 @@
+var generalContent = document.getElementsByClassName('general-content')[0];
 var sidebar = document.getElementsByClassName('sidebar')[0];
 var whoAmIContent = document.getElementsByClassName('who-am-i-content')[0];
 var projectsContent = document.getElementsByClassName('projects-content')[0];
@@ -41,34 +42,43 @@ function profilesButtonOnClick() {
 
 //Show project images buttons onclicks
 function showSMPUVImagesButtonOnClick() {
-    selectedProjectImageVisualizator.style.display = "absolute";
+        showProjectImagesAndHideAllAnotherContent();
 }
 
 function showSPGERImagesButtonOnClick() {
-
+    showProjectImagesAndHideAllAnotherContent();
 }
 
 function showRenovacionLISImagesButtonOnClick() {
-
+    showProjectImagesAndHideAllAnotherContent();
 }
 
 function showLaCopiaDeBlockbusterParaPrograSeguraImagesButtonOnClick() {
-
+    showProjectImagesAndHideAllAnotherContent();
 }
 
 function showItaliaPizzaImagesButtonOnClick() {
-
+    showProjectImagesAndHideAllAnotherContent();
 }
 
 function showDevClothesShopImagesButtonOnClick() {
-
+    showProjectImagesAndHideAllAnotherContent();
 }
 
 function showDahAutobiographyImagesButtonOnClick() {
-
+    showProjectImagesAndHideAllAnotherContent();
 }
 
 function selectedProjectImageVisualizatorCloseButtonOnClick() {
     selectedProjectImageVisualizator.style.display = "none";
+    generalContent.style.display = "block";
 }
 
+
+
+//Auxiliary functions
+function showProjectImagesAndHideAllAnotherContent() {
+    sidebar.style.display = "none";
+    generalContent.style.display = "none";
+    selectedProjectImageVisualizator.style.display = "block";
+}

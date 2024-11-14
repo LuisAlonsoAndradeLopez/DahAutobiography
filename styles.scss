@@ -6,6 +6,9 @@ $red: #ff3f49;
 $very-dark-red: #461215;
 $white: #ffffff;
 
+$semi-transparent-black: rgba(17, 17, 17, 0.25);
+$semi-transparent-dark-gray: rgba(34, 34, 34, 0.25);
+
 $transparent-black: rgba(17, 17, 17, 0);
 $transparent-dark-gray: rgba(34, 34, 34, 0);
 
@@ -31,7 +34,7 @@ $transparent-dark-gray: rgba(34, 34, 34, 0);
 }
 
 @mixin flex-row-container() {
-    align-items: center;    
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -52,6 +55,31 @@ $transparent-dark-gray: rgba(34, 34, 34, 0);
 
     &:active {
         background-color: $very-dark-red;
+    }
+}
+
+@mixin close-button-content {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    top: -10px;
+    right: -10px;
+    font-size: 10px;
+    color: $white;
+    //transition: color 0.3s ease;
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover {
+        color: $red;
+    }
+
+    &:active {
+        color: $very-dark-red;
     }
 }
 
@@ -96,29 +124,7 @@ body {
             @include color-bg-transition($dark-gray, $transparent-dark-gray, sidebarColorChange);
 
             .close-button {
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                padding: 10px;
-                position: absolute;
-                top: -10px;
-                right: -10px;
-                font-size: 10px;
-                color: $white;
-                //transition: color 0.3s ease;
-
-                svg {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                &:hover {
-                    color: $red;
-                }
-
-                &:active {
-                    color: $very-dark-red;
-                }
+                @include close-button-content();
             }
 
             .sidebar-div {
@@ -190,6 +196,7 @@ body {
                 border-radius: 20px;
                 margin: 0px 20px 20px 20px;
                 @include flex-column-container();
+                display: flex;
 
                 .my-name-is-text-div {
                     border-radius: 20px 20px 0px 0px;
@@ -429,10 +436,59 @@ body {
                 }
             }
         }
+
+        .selected-project-image-visualizator-div {
+            position: absolute;
+            width: 100%;
+            display: none;
+
+            .close-button {
+                @include close-button-content();         
+            }
+
+            .selected-project-image-visualizator-content-div {
+                background-color: $dark-gray;
+                border-radius: 20px;
+                margin: 0px 20px 20px 20px;    
+                @include flex-column-container();
+
+                .selected-project-selected-image-div {
+                    background-color: $black;
+                    border-radius: 20px;
+                    margin: 20px 20px 0px 20px;
+                    width: auto;
+                    @include flex-column-container();
+
+                    img {
+                        width: 356px;
+                        height: 356px;
+                        margin: 20px;
+                    }
+                }
+
+                .selected-project-images-div {
+                    background-color: $black;
+                    border-radius: 20px;
+                    margin: 20px;
+                    width: 97%;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    @include flex-row-container();
+
+                    img {
+                        width: 75px;
+                        height: 75px;
+                        margin: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 400px) {
+
     .sidebar-button,
     .visit-profile-button,
     .visit-project-button {

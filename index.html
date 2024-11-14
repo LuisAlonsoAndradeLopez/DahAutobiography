@@ -143,7 +143,8 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showSMPUVImagesButton" onclick="showSMPUVImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showSMPUVImagesButton"
+                                    onclick="showSMPUVImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/SMPUV';"
                                     class="project-button">Visitar Repositorio</button>
@@ -173,7 +174,8 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showSPGERImagesButton" onclick="showSPGERImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showSPGERImagesButton"
+                                    onclick="showSPGERImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button onclick="window.location.href='https://github.com/Luigi573/SPGER';"
                                     class="project-button">Visitar Repositorio</button>
                             </div>
@@ -203,7 +205,8 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showRenovacionLISImagesButton" onclick="showRenovacionLISImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showRenovacionLISImagesButton"
+                                    onclick="showRenovacionLISImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/RenovacionLIS';"
                                     class="project-button">Visitar Repositorio</button>
@@ -232,7 +235,9 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showLaCopiaDeBlockbusterParaPrograSeguraImagesButton" onclick="showLaCopiaDeBlockbusterParaPrograSeguraImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showLaCopiaDeBlockbusterParaPrograSeguraImagesButton"
+                                    onclick="showLaCopiaDeBlockbusterParaPrograSeguraImagesButtonOnClick()">Visualizar
+                                    Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/LaCopiaDeBlockbusterParaPrograSegura';"
                                     class="project-button">Visitar Repositorio</button>
@@ -263,7 +268,8 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showItaliaPizzaImagesButton" onclick="showItaliaPizzaImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showItaliaPizzaImagesButton"
+                                    onclick="showItaliaPizzaImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/ItaliaPizza';"
                                     class="project-button">Visitar Repositorio</button>
@@ -304,7 +310,8 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showDevClothesShopImagesButton" onclick="showDevClothesShopImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showDevClothesShopImagesButton"
+                                    onclick="showDevClothesShopImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/DevClothesShop';"
                                     class="project-button">Visitar Repositorio</button>
@@ -320,7 +327,7 @@
                             <p class="project-description">El primer proyecto que forma parte
                                 de la materia Desarrollo de Sistemas Web, Dah Autobiography es basicamente una
                                 aplicación web solamente en la parte del cliente que consiste en una autobiografía del
-                                propio autor en donde menciona un poco quien es, los proyectos que ha realizado y sus 
+                                propio autor en donde menciona un poco quien es, los proyectos que ha realizado y sus
                                 perfiles de contacto.</p>
                             <div class="project-used-technologies">
                                 <p>Tecnologías Usadas:</p>
@@ -332,7 +339,8 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showDahAutobiographyImagesButton" onclick="showDahAutobiographyImagesButtonOnClick()">Visualizar Imágenes</button>
+                                <button class="project-button" id="showDahAutobiographyImagesButton"
+                                    onclick="showDahAutobiographyImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/DahAutobiography';"
                                     class="project-button">Visitar Repositorio</button>
@@ -385,11 +393,21 @@
         </section>
 
         <div class="selected-project-image-visualizator-div">
-            <div class="selected-project-selected-image-div">
-                <img src="/resources/profiles_images/instagramLogo.png" alt="Selected Project Selected Image" class="selected-project-selected-image">
-            </div>
-            <div class="selected-project-images-div">
-                <img src="/resources/profiles_images/instagramLogo.png" alt="Selected Project Selected Image" class="selected-project-image">
+            <button class="close-button" onclick="selectedProjectImageVisualizatorCloseButtonOnClick()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <div class="selected-project-image-visualizator-content-div">
+                <div class="selected-project-selected-image-div">
+                    <img src="/resources/profiles_images/instagramLogo.png" alt="Selected Project Selected Image"
+                        class="selected-project-selected-image">
+                </div>
+                <div class="selected-project-images-div">
+                    <img src="/resources/profiles_images/instagramLogo.png" alt="Selected Project Selected Image"
+                        class="selected-project-image">
+                </div>
             </div>
         </div>
     </div>
