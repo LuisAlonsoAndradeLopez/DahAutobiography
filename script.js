@@ -40,45 +40,7 @@ function profilesButtonOnClick() {
     profilesContent.style.display = "flex";
 }
 
-//Show project images buttons onclicks
-function showSMPUVImagesButtonOnClick() {
-        showProjectImagesAndHideAllAnotherContent();
-}
-
-function showSPGERImagesButtonOnClick() {
-    showProjectImagesAndHideAllAnotherContent();
-}
-
-function showRenovacionLISImagesButtonOnClick() {
-    showProjectImagesAndHideAllAnotherContent();
-}
-
-function showLaCopiaDeBlockbusterParaPrograSeguraImagesButtonOnClick() {
-    showProjectImagesAndHideAllAnotherContent();
-}
-
-function showItaliaPizzaImagesButtonOnClick() {
-    showProjectImagesAndHideAllAnotherContent();
-}
-
-function showDevClothesShopImagesButtonOnClick() {
-    showProjectImagesAndHideAllAnotherContent();
-}
-
-function showDahAutobiographyImagesButtonOnClick() {
-    showProjectImagesAndHideAllAnotherContent();
-}
-
 function selectedProjectImageVisualizatorCloseButtonOnClick() {
     selectedProjectImageVisualizator.style.display = "none";
     generalContent.style.display = "block";
-}
-
-
-
-//Auxiliary functions
-function showProjectImagesAndHideAllAnotherContent() {
-    sidebar.style.display = "none";
-    generalContent.style.display = "none";
-    selectedProjectImageVisualizator.style.display = "block";
 }

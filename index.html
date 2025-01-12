@@ -24,7 +24,7 @@
                 <img src="/resources/profileImage.jpg" alt="Sidebar Image" class="profile-img">
             </div>
             <div class="sidebar-div sidebar-content">
-                <button class="sidebar-button" onclick="whoAmIButtonOnClick()">¿Quién se supone que soy yo?</button>
+                <button class="sidebar-button" onclick="whoAmIButtonOnClick()">¿Quién soy yo?</button>
                 <button class="sidebar-button" onclick="projectsButtonOnClick()">Proyectos</button>
                 <button class="sidebar-button" onclick="profilesButtonOnClick()">Perfiles</button>
             </div>
@@ -101,6 +101,11 @@
                                 class="technology-image">
                         </div>
                         <div class="technology-div general-content-subcontent-div">
+                            <h1 class="technology-title">Spring Boot</h1>
+                            <img src="/resources/who_am_i_images/springBootLogo.png" alt="Spring Boot Image"
+                                class="technology-image">
+                        </div>
+                        <div class="technology-div general-content-subcontent-div">
                             <h1 class="technology-title">MySQL</h1>
                             <img src="/resources/who_am_i_images/mysqlLogo.png" alt="MySQL Image"
                                 class="technology-image">
@@ -115,6 +120,11 @@
                             <img src="/resources/who_am_i_images/dockerLogo.png" alt="Docker Image"
                                 class="technology-image">
                         </div>
+                        <div class="technology-div general-content-subcontent-div">
+                            <h1 class="technology-title">Podman</h1>
+                            <img src="/resources/who_am_i_images/podmanLogo.png" alt="Podman Image"
+                                class="technology-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,13 +135,13 @@
                 </div>
                 <div class="all-projects-content-div general-content-subcontent-div">
                     <div class="vertically-ordered-projects-content-div general-content-div">
-                        <div class="project-div general-content-subcontent-div">
+                        <div class="project-div general-content-subcontent-div" id="first-project-div">
                             <div class="project-title-and-release-date-div">
                                 <h1 class="project-title">SMPUV</h1>
                                 <h1 class="project-release-date">07/06/2023</h1>
                             </div>
                             <img src="/resources/projects_images/smpuvLogo.png" alt="SMPUV Image" class="project-image">
-                            <p class="project-description">Proyecto final de la materia Procesos para la Ingeniebría de
+                            <p class="project-description">Proyecto final de la materia Procesos para la Ingeniería de
                                 Software, SMPUV es un mini sistema de administración (CRU) de componentes de hardware de
                                 computadoras.</p>
                             <div class="project-used-technologies">
@@ -143,8 +153,6 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showSMPUVImagesButton"
-                                    onclick="showSMPUVImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/SMPUV';"
                                     class="project-button">Visitar Repositorio</button>
@@ -174,8 +182,6 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showSPGERImagesButton"
-                                    onclick="showSPGERImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button onclick="window.location.href='https://github.com/Luigi573/SPGER';"
                                     class="project-button">Visitar Repositorio</button>
                             </div>
@@ -192,7 +198,7 @@
                                 con temática de la Licenciatura en Ingeniería de Software de la FEI. En Renovación LIS
                                 se podrán jugar crucigramas variados tanto en modo de un jugador como multijugador,
                                 además hay más opciones como tener perfíl propio, crear
-                                amigos y mandar solicitudes de amistas, y un chat en vivo.</p>
+                                amigos y mandar solicitudes de amistad, y un chat en vivo.</p>
                             <div class="project-used-technologies">
                                 <p>Tecnologías Usadas:</p>
                                 <ul>
@@ -205,8 +211,6 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showRenovacionLISImagesButton"
-                                    onclick="showRenovacionLISImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/RenovacionLIS';"
                                     class="project-button">Visitar Repositorio</button>
@@ -235,9 +239,6 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showLaCopiaDeBlockbusterParaPrograSeguraImagesButton"
-                                    onclick="showLaCopiaDeBlockbusterParaPrograSeguraImagesButtonOnClick()">Visualizar
-                                    Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/LaCopiaDeBlockbusterParaPrograSegura';"
                                     class="project-button">Visitar Repositorio</button>
@@ -268,8 +269,6 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showItaliaPizzaImagesButton"
-                                    onclick="showItaliaPizzaImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/ItaliaPizza';"
                                     class="project-button">Visitar Repositorio</button>
@@ -310,8 +309,6 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showDevClothesShopImagesButton"
-                                    onclick="showDevClothesShopImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/DevClothesShop';"
                                     class="project-button">Visitar Repositorio</button>
@@ -320,12 +317,12 @@
                         <div class="project-div general-content-subcontent-div">
                             <div class="project-title-and-release-date-div">
                                 <h1 class="project-title">Dah Autobiography</h1>
-                                <h1 class="project-release-date">06/12/2024</h1>
+                                <h1 class="project-release-date">28/10/2024</h1>
                             </div>
                             <img src="/resources/projects_images/dahAutobiographyLogo.png" alt="DahAutobiography Image"
                                 class="project-image">
                             <p class="project-description">El primer proyecto que forma parte
-                                de la materia Desarrollo de Sistemas Web, Dah Autobiography es basicamente una
+                                de la materia Desarrollo de Sistemas Web. Dah Autobiography es basicamente una
                                 aplicación web solamente en la parte del cliente que consiste en una autobiografía del
                                 propio autor en donde menciona un poco quien es, los proyectos que ha realizado y sus
                                 perfiles de contacto.</p>
@@ -339,10 +336,74 @@
                                 </ul>
                             </div>
                             <div class="project-buttons">
-                                <button class="project-button" id="showDahAutobiographyImagesButton"
-                                    onclick="showDahAutobiographyImagesButtonOnClick()">Visualizar Imágenes</button>
                                 <button
                                     onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/DahAutobiography';"
+                                    class="project-button">Visitar Repositorio</button>
+                            </div>
+                        </div>
+                        <div class="project-div general-content-subcontent-div">
+                            <div class="project-title-and-release-date-div">
+                                <h1 class="project-title">Aldalú</h1>
+                                <h1 class="project-release-date">12/01/2025</h1>
+                            </div>
+                            <img src="" alt="Aldalú Image" class="project-image">
+                            <p class="project-description">El segundo proyecto que forma parte de la materia de
+                                Desarrollo de Sistemas Web. Aldalú es una tienda en donde se podrán realizar compras de
+                                diversos artículos disponibles, y dichos artículos comprados podrán ser asignados a
+                                pedidos en direcciónes específicas, como un simulador de un e-commerce. Entre las
+                                funcionalidades que se pueden realizar con Aldalú está la gestión de repartidores,
+                                usuarios y productos, inicio de sesión, registro del sistema, consulta de perfil y
+                                administración de tarjetas y direcciones, compras de artículos para colocarlos en el
+                                carro de compras, y relizar pedidos de los artículos almacenados en el carro de compras
+                                usando direcciones en específico y tarjeras deseadas.</p>
+                            <div class="project-used-technologies">
+                                <p>Tecnologías Usadas:</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Bootstrap</li>
+                                    <li>Javascript</li>
+                                    <li>Java</li>
+                                    <li>JSON Web Tokens</li>
+                                    <li>Spring Boot</li>
+                                    <li>MySQL</li>
+                                    <li>Podman</li>
+                                </ul>
+                            </div>
+                            <div class="project-buttons">
+                                <button
+                                    onclick="window.location.href='https://github.com/Daniel-Arcos/ProyectoDesarrolloWeb.git';"
+                                    class="project-button">Visitar Repositorio</button>
+                            </div>
+                        </div>
+                        <div class="project-div general-content-subcontent-div" id="last-project-div">
+                            <div class="project-title-and-release-date-div">
+                                <h1 class="project-title">Diagrammings</h1>
+                                <h1 class="project-release-date">12/01/2025</h1>
+                            </div>
+                            <img src="" alt="Diagrammings Image" class="project-image">
+                            <p class="project-description">El tercer proyecto que forma parte de la materia Desarrollo
+                                de Sistemas Web. Diagrammings es una aplicación web en la que se pueden realizar
+                                diagramas de flujo y diagramas de casos de uso. Estos diagramas se podrán elaborar solos
+                                o con varias personas ya que Diagrammings permite la elaboración de diagramas con varias
+                                personas en tiempo real. Además, dichos diagramas podrán ser exportados en formato PNG
+                                para su conservación.</p>
+                            <div class="project-used-technologies">
+                                <p>Tecnologías Usadas:</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Sass</li>
+                                    <li>Javascript</li>
+                                    <li>Java</li>
+                                    <li>Fabric.js</li>
+                                    <li>Spring Boot</li>
+                                    <li>Podman</li>
+                                </ul>
+                            </div>
+                            <div class="project-buttons">
+                                <button
+                                    onclick="window.location.href='https://github.com/LuisAlonsoAndradeLopez/Diagrammings';"
                                     class="project-button">Visitar Repositorio</button>
                             </div>
                         </div>

@@ -289,13 +289,15 @@ body .container .general-content .projects-content .all-projects-content-div .ve
   height: 394px;
   width: 97%;
   margin: 20px;
+  gap: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div {
   width: 97%;
   border-radius: 20px;
-  margin: 20px 10px 20px 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -362,6 +364,12 @@ body .container .general-content .projects-content .all-projects-content-div .ve
 }
 body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div .project-div .project-buttons .project-button:active {
   background-color: #461215;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div #first-project-div {
+  margin-top: 20px;
+}
+body .container .general-content .projects-content .all-projects-content-div .vertically-ordered-projects-content-div #last-project-div {
+  margin-bottom: 20px;
 }
 body .container .general-content .profiles-content {
   border-radius: 20px;
